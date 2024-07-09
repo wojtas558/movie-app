@@ -1,6 +1,7 @@
 :root{
-    --mainBackground: #B3B4BD;
-    --secondaryBackground: #141619;
-    --mainFontColor: #124E66;
-    --secondaryFontColor: #B3B4BD;
+    --mainBackground: #212A31;
+    --secondaryBackground: #B3B4BD;
+    --navBackground: #141619;
+    --mainFontColor: #748D92;
+    --secondaryFontColor: #124E66;
 }

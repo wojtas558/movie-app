@@ -1,0 +1,21 @@
+/* navbar */
+.nav{
+    background-color: var(--navBackground);
+}
+.nav  a{
+    color: var(--mainFontColor) !important;
+}
+.nav  a:hover{
+    color: var(--secondaryFontColor) !important;
+}
+
+
+
+/* main */
+body{
+    background-color: var(--mainBackground);
+    color: var(--mainFontColor);
+    font-weight: 500;
+}
+
+
