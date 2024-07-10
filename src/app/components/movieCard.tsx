@@ -2,7 +2,7 @@
 import { useState } from "react";
 import Image from "next/image"
 import Link from "next/link";
-import style from "./components.module.css"
+import style from "./movieCard.module.css"
 
 
 function getBookmarkType(iconType : boolean){
@@ -16,11 +16,10 @@ function getTypeIcon(iconType : boolean){
 
 export default function MovieCard({title = "Film title", imageSrc = "/posterPlaceholder.jpg", rating = 50, bookmark = false, isMovie = false} 
     : {title?: string, imageSrc?: string, rating?: number, bookmark?: boolean, isMovie?: boolean}){
+        
     const [isBookmarked, setBookmark] = useState(bookmark);
-    
 
     return (
-    <>
     <Link href={""} className={`${style.movieCard} col-6 col-md-3 col-lg-2 position-relative pt-2 p-1 pb-0 pb-md-2`}>
         <div className={`${style.bookmark} position-absolute`} onClick={() => setBookmark(!isBookmarked)}>
             <Image className="" 
@@ -40,6 +39,5 @@ export default function MovieCard({title = "Film title", imageSrc = "/posterPlac
             <div className="float-end">{rating}%</div>
         </div>
     </Link>
-    </>
     )
 }

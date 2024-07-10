@@ -1,0 +1,33 @@
+
+.page::-webkit-scrollbar{
+    height: 12px;
+}
+.page::-webkit-scrollbar-track{
+    background-color: var(--navBackground);
+}
+.page::-webkit-scrollbar-track:hover{
+    background-color: var(--secondaryBackground);
+}
+.page::-webkit-scrollbar-thumb{
+    background-color: var(--mainFontColor);
+}
+.page::-webkit-scrollbar-thumb:hover{
+    background-color: var(--secondaryFontColor);
+}
+/* .page::-webkit-scrollbar-button{
+    width: 12px;
+    background-color: var(--secondaryFontColor);
+} */
+.timeButton{
+    border: 2px var(--mainFontColor) solid;
+    color: var(--mainFontColor);
+    font-weight: 500;
+}
+.timeButton.selected{
+    background-color: var(--mainFontColor);
+    color: var(--secondaryFontColor);
+}
+.timeButton:hover{
+    border: 2px var(--secondaryFontColor) solid;
+    color: var(--secondaryFontColor);
+}

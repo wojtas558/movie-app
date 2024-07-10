@@ -17,5 +17,19 @@ body{
     color: var(--mainFontColor);
     font-weight: 500;
 }
-
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background-color: var(--navBackground);
+}
+::-webkit-scrollbar-track:hover{
+    background-color: var(--secondaryBackground);
+}
+::-webkit-scrollbar-thumb{
+    background-color: var(--mainFontColor);
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: var(--secondaryFontColor);
+}
 

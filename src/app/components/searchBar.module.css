@@ -2,6 +2,18 @@
     border: 2px var(--mainFontColor) solid;
     color: var(--mainFontColor);
     border-radius: 6px 0px 0px 6px;
+    font-weight: 500;
+}
+.selection{
+    background-color: var(--secondaryBackground);
+    border: 2px solid var(--mainFontColor);
+}
+.selection > li.selected{
+    border-left: 10px solid var(--mainBackground);
+}
+.selection > li:hover{
+    color: var(--mainFontColor);
+    background-color: var(--mainBackground);;
 }
 .searchBox{
     border-radius: 0px 6px 6px 0px;
