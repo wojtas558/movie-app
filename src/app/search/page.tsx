@@ -51,16 +51,9 @@ export default function Page() {
                         width: params.width, 
                         height: params.height
                     }));    
-                    if(resu.results[i].primaryImage){
-                        // temp.push(<img src={resu.results[i].primaryImage.url} width={resu.results[i].primaryImage.width} height={resu.results[i].primaryImage.height} alt={""}/>);
-                    }   
                 }
                 
                 setMovieCards(temp);
-                // return (
-                // <div className="row container-fluid">
-                //     {movieCards}
-                // </div>);
             }
         }
         if(search){
