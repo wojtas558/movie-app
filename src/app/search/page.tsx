@@ -3,7 +3,7 @@ import { useSearchParams } from 'next/navigation'
 import { createElement, Suspense, useEffect, useState } from 'react';
 import MovieCard from '../components/movieCard';
 
-export default function Page() {
+export function SidePage() {
     const searchParams = useSearchParams()
     const search = searchParams.get('param')
     // const [data, setData] = useState();
@@ -64,8 +64,16 @@ export default function Page() {
     }, [search]);
 
     return (
-    <Suspense>
+    <>
         <h2 className='m-2'>Search: {search}</h2>
         <div className="row container-fluid gy-5 justify-content-center">{movieCards}</div>
-    </Suspense>)
+    </>)
+}
+
+export default function Page(){
+    return (
+        <Suspense>
+            <SidePage></SidePage>
+        </Suspense>
+    )
 }
