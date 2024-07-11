@@ -6,6 +6,7 @@ import SearchBar from "./components/searchBar"
 import 'bootstrap/dist/css/bootstrap.css'
 import "./variables.css"
 import "./global.css"
+import { Suspense } from "react";
 
 export const metadata: Metadata = {
     title: "Movie App",
@@ -38,7 +39,10 @@ export default function RootLayout({
                             <Link className="nav-link" href="/library">Library</Link>
                         </li>
                     </ul>
+                    <Suspense>
+
                     <SearchBar></SearchBar>
+                    </Suspense>
                 </div>
             </div>
             </nav>
