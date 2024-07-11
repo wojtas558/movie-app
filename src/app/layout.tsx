@@ -21,7 +21,7 @@ export default function RootLayout({
         <body>
             <Script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossOrigin="anonymous" />
             <Script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossOrigin="anonymous" />
-            <nav className={`nav navbar navbar-expand-md`}>
+            <nav className={`nav navbar navbar-dark navbar-expand-md sticky-top`}>
             <div className="container-fluid">
                 <Link className="navbar-brand" href="/">
                     <Image src={"/favicon.png"} alt="Home icon" width={32} height={32}></Image>
