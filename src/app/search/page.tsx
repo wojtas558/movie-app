@@ -1,8 +1,7 @@
 'use client'
 import { useSearchParams } from 'next/navigation'
-import { createElement, useEffect, useState } from 'react';
+import { createElement, Suspense, useEffect, useState } from 'react';
 import MovieCard from '../components/movieCard';
-import Image from 'next/image';
 
 export default function Page() {
     const searchParams = useSearchParams()
@@ -65,8 +64,8 @@ export default function Page() {
     }, [search]);
 
     return (
-    <>
+    <Suspense>
         <h2 className='m-2'>Search: {search}</h2>
         <div className="row container-fluid gy-5 justify-content-center">{movieCards}</div>
-    </>)
+    </Suspense>)
 }
