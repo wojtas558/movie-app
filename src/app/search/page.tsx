@@ -3,7 +3,7 @@ import { useSearchParams } from 'next/navigation'
 import { createElement, Suspense, useEffect, useState } from 'react';
 import MovieCard from '../components/movieCard';
 
-export function SidePage() {
+function SidePage() {
     const searchParams = useSearchParams()
     const search = searchParams.get('param')
     // const [data, setData] = useState();
