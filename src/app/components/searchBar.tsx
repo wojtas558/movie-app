@@ -6,15 +6,15 @@ import style from "./searchBar.module.css"
 export default function SearchBar(){
 
 const [searchType, setSearchType] = useState("All");
+const [paramVal, setParamVal] = useState("All");
 const router = useRouter();
-const pathname = usePathname();
+// const pathname = usePathname();
 const params = new URLSearchParams(useSearchParams());
 
 const search = async (event: FormEvent) => {
     event.preventDefault();
     
-    const val = (event.target as HTMLInputElement).parameter.value;
-    params.set("param", val);
+    params.set("param", paramVal);
     router.push(`/search/?${params.toString()}`);
 }
 
@@ -29,7 +29,7 @@ return(
                 <li className={`${"Actors" == searchType ? style.selected : ""} dropdown-item`} onClick={() => setSearchType("Actors")}>Actors</li>
             </ul>
         </div>
-        <input name="parameter" className={`${style.searchBox} form-control me-2`} type="search" placeholder="Search"/>
+        <input name="parameter" className={`${style.searchBox} form-control me-2`} type="search" placeholder="Search" onChange={e => {setParamVal(e.currentTarget.value)}}/>
         <button className={`${style.searchButton} ${style.button} btn`} type="submit">Search</button>
     </form>
 )
