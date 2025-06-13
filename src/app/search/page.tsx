@@ -7,7 +7,7 @@ function SidePage() {
     const searchParams = useSearchParams()
     const search = searchParams.get('param')
     // const [data, setData] = useState();
-    const [movieCards, setMovieCards] = useState([<div>e</div>, <div>a</div>]);
+    const [movieCards, setMovieCards] = useState([<></>]);
     
     useEffect(() => {
         console.log(search);
@@ -16,11 +16,12 @@ function SidePage() {
         const options = {
             method: 'GET',
             headers: {
-                'x-rapidapi-key': '8109669eedmsh7040365510e7bd1p1019f2jsn6c981d5eb7b6',
+                'x-rapidapi-key': process.env.NEXT_PUBLIC_API_KEY as string,
                 'x-rapidapi-host': 'moviesdatabase.p.rapidapi.com'
             }
         };
         
+
         const fun = async () =>{
             const resp = await fetch(url, options);
             const resu = await resp.json();
@@ -57,7 +58,6 @@ function SidePage() {
         }
         if(search){
             fun();
-            
         }
         
     
